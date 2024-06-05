@@ -1,0 +1,409 @@
+<!--
+Conntains the string representation of the rooms in the game.
+X = Wall, F = Floor, I = Item location, S = spawn point of enemy, P = Player, D = Door
+
+
+All rooms must be the same size (currently 9x9).
+Named rooms are used for special rooms like start and exit.
+-->
+<rooms>
+    <namedRooms>
+        <room name="Start">
+            <![CDATA[
+            XXXFFFXXX
+            XFFFFFFFX
+            XFXXXXXFX
+            FFXFFFXFF
+            FFFFPFFFF
+            FFFFFFFFF
+            FFXFFFXFF
+            FFXXXXXFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room name="Exit">
+            <![CDATA[
+            XXXFFFXXX
+            XFFFFFFFX
+            XFFXXXFFX
+            FFFXDXFFF
+            FSFFFFFSF
+            FFFFSFFFF
+            XFFFFFFFX
+            XSFFFFFSX
+            XXXFFFXXX
+            ]]>
+        </room>
+        <room name="Empty">
+            <![CDATA[
+            ---------
+            ---------
+            ---------
+            ---------
+            ---------
+            ---------
+            ---------
+            ---------
+            ---------
+            ]]>
+        </room>
+        <!-- Add more named rooms here -->
+    </namedRooms>
+    <testRooms>
+        <room name="canExit">
+            <![CDATA[
+            XXXXXXXXX
+            XFFFFFFFX
+            XFFXXXFFX
+            XFFXDXFFX
+            XFFFFFFFX
+            XFFFFFFFX
+            XFFFPFFFX
+            XSFFFFFSX
+            XXXXXXXXX
+            ]]>
+        </room>
+        <room name="cantExit">
+            <![CDATA[
+            XXXXXXXXX
+            XFFFFFFFX
+            XFFXXXFFX
+            XFFXDXFFX
+            XFFXXXFFX
+            XFFFFFFFX
+            XFFFPFFFX
+            XSFFFFFSX
+            XXXXXXXXX
+            ]]>
+        </room>
+        <!-- Add more test rooms here -->
+    </testRooms>
+    <numberedRooms>
+        <room number="1">
+            <![CDATA[
+            XXXFFFXXX
+            XFFFFFFFX
+            XFFFFFFFX
+            FFFXXXFFF
+            FFSFFFSFF
+            FFFXXXFFF
+            XFFFFFFFX
+            XFFFIFFFX
+            XXXFFFXXX
+            ]]>
+        </room>
+        <room number="2">
+            <![CDATA[
+            XXXFFFXXX
+            XXXFFFFFX
+            XXXFFFSFX
+            FFFFFFFFF
+            FFSFFFFFF
+            FFFFFFSFF
+            XXXFFFFFX
+            XXXFFFFIX
+            XXXFFFXXX
+            ]]>
+        </room>
+        <room number="3">
+            <![CDATA[
+            XXXFFFXXX
+            XXXFFFSIX
+            XFFFFFXXX
+            FFSFFFFFF
+            FFFFFFFFF
+            FFFFFFFFF
+            XFSFFFXXX
+            XXXFFFFFX
+            XXXFFFXXX
+            ]]>
+        </room>
+        <room number="4">
+            <![CDATA[
+            XXXFFFXXX
+            XFFFFFFFX
+            XFSFFFFIX
+            FFFXXXFFF
+            FFFXXXFFF
+            FFFXXXFFF
+            XFFFFSFFX
+            XFFFFFFFX
+            XXXFFFXXX
+            ]]>
+        </room>
+        <room number="5">
+        <![CDATA[
+            FFFFFFFFF
+            FFFFXXFFF
+            XXFFFFFIF
+            FXFFSFXXF
+            FFFFFFXXF
+            FFFFFFFFF
+            FXXFFSFFF
+            FXXFFFXXX
+            FFFFFFXXX
+            ]]>
+        </room>
+        <room number="6">
+            <![CDATA[
+            XXXFFFFFF
+            FFFFFXXXX
+            FFSFFFFIF
+            FFFFFFFFF
+            FFFXXXXXF
+            FFFFFFFFF
+            XXXXFSFFF
+            FFFFFFFFF
+            FFFFFFXXX
+            ]]>
+        </room>
+        <room number="7">
+            <![CDATA[
+            FFFFFFFFF
+            FXXXXFFXX
+            FXFFFFFFF
+            FXFSFFFFF
+            FXIFFFXFF
+            FXXXXXXFF
+            FFFFFSFFF
+            FFFXXXXXF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="8">
+            <![CDATA[
+            FFFFFFFFF
+            FFFFXXFFF
+            XXFFFFFIF
+            FXFFSFXXF
+            FFFFFFXXF
+            FFFFFFFFF
+            FXXFFSFFF
+            FXXFFFXXX
+            FFFFFFXXX
+            ]]>
+        </room>
+        <room number="9">
+            <![CDATA[
+            XXXFFFFFF
+            FFFFFXXXX
+            FFSFFFFIF
+            FFFFFFFFF
+            FFFXXXXXF
+            FFFFFFFFF
+            XXXXFSFFF
+            FFFFFFFFF
+            FFFFFFXXX
+            ]]>
+        </room>
+        <room number="10">
+            <![CDATA[
+            FFFFFFFFF
+            FXXXXFFXX
+            FXFFFFFFF
+            FXFSFFFFF
+            FXFFFFFFF
+            FXXXXXXFF
+            FFFFFSFFF
+            FFFXXXXXF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="11">
+            <![CDATA[
+            FFFFFFFFF
+            FFFFFXXFF
+            FFFXXFSFF
+            FFXFFFSFF
+            FFFFFFFFF
+            FFFFFFSFF
+            FFXXFFFFF
+            FFFFFXXFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="12">
+            <![CDATA[
+            XXXFFFFFF
+            XFFFFXFFF
+            XXXXXFSFF
+            FFFFFFFFF
+            FFSFSFSFF
+            FFFFFFFFF
+            FSFXXXXXX
+            FFFFFFFIX
+            FFFFFFXXX
+            ]]>
+        </room>
+        <room number="13">
+            <![CDATA[
+            FFFFFFXXF
+            FFFFFFFFF
+            FFFXXFFFF
+            FFXFFFSFF
+            FFFFFFSFF
+            FFFFFFSFF
+            FFXXFFFFF
+            FFFFFXXFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="14">
+            <![CDATA[
+            FFFFFFFFF
+            FFFFFXXFF
+            FFFXXFFFF
+            FFXSFFSFF
+            FFFFFFFFF
+            FFSFFFSFF
+            FFXFSFFFF
+            FFFFFXXFF
+            XXXFFFFFF
+            ]]>
+        </room>
+        <room number="15">
+            <![CDATA[
+            FFFFFFFFF
+            FSFFFXXFF
+            FFFXXFFFF
+            FFFFFFSFF
+            FSFFFFFFF
+            FFFFFFSFF
+            FFXXFFFFF
+            FFFFFXXFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="16">
+            <![CDATA[
+            FFFFSFFFF
+            FXXFIFXFF
+            FFFXXFFFF
+            FFXFFFSFF
+            FFFFFFFFF
+            FFFFFFSFF
+            FFXXFFFFF
+            FFFFFXXFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="17">
+            <![CDATA[
+            FFFFFFFFF
+            FFFFFXXFF
+            FFFXXFFFF
+            FFXFFFFFF
+            FFFFFFSFF
+            FFSFFFFFF
+            FFXXFSFFX
+            FFFFFFFFX
+            FFFFFFXXX
+            ]]>
+        </room>
+        <room number="18">
+            <![CDATA[
+            FFFFFFFFF
+            FFFFFXXFF
+            FFFXXFSFF
+            FFXSFFSFF
+            FFSFFFSFF
+            FFSFFFSFF
+            FFXXSFSFF
+            FFFFFXXFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="19">
+            <![CDATA[
+            XXXFFFXXX
+            XFFFFXFFF
+            XFFXXFSFF
+            FFXFFFFFF
+            FFFFFFSFF
+            FFFFFFFFF
+            XFXXFFSFF
+            XFFXXFFFF
+            FFFFFFFFF
+            ]]>
+        </room>
+        <room number="20">
+            <![CDATA[
+            FXXFFFXXF
+            FFFFFFFFF
+            XFFFFSFFX
+            FFFFFFSFF
+            FFSFFFFFF
+            FFSFFFSFF
+            XFFFSFSFX
+            FFIFFFFFF
+            FXXFFFXXF
+            ]]>
+        </room>
+        <room number="21">
+            <![CDATA[
+            FFFFFFFFF 
+            FXFXFXFXF 
+            FFFSFFFFF 
+            FXFXFXFXF 
+            FFFFISFFF 
+            FXFXFXFXF 
+            FFFSFFFFF 
+            FXFXFXFXF 
+            FFFFFFFFF 
+            ]]>
+        </room>
+        <room number="22">
+            <![CDATA[
+            FFFFFFFFF 
+            FXXFFFXXF 
+            FXFFSFFXF 
+            FXFXXXFFF 
+            FXIFFXXXF 
+            FXXXFSFXF 
+            FFFXXXFXF 
+            FSFFFFFXF 
+            FXXFFFFXX 
+            ]]>
+        </room>
+        <room number="23">
+            <![CDATA[
+            XXXFFFXXX 
+            XFFFFFFFX 
+            XFFXFXFFX 
+            FFSXFXSFF 
+            FXXXIXXXF 
+            FFSXFXSFF 
+            XFFXFXFFX 
+            XFFFFFFFX 
+            XXXFFFXXX 
+            ]]>
+        </room>
+        <room number="24">
+            <![CDATA[
+            XXXFFFXXX 
+            XSFFXFFSX 
+            XFXFFFXFX 
+            FFXXFXXFF 
+            FFXSISXFF 
+            FFXXFXXFF 
+            XFXFFFXFX 
+            XSFFXFFSX 
+            XXXFFFXXX 
+            ]]>
+        </room>
+        <room number="25">
+            <![CDATA[
+            XXXFFFXXX 
+            XIFXFFFFX 
+            XXFFXFFFX 
+            FFXFFSFFF 
+            SFFFSFFFF 
+            FFXXFXXFF 
+            FFXFIFXFF 
+            XXXFSFXXX 
+            FFFFFFFFF 
+            ]]>
+        </room>
+        <!-- Add more numbered rooms here -->
+    </numberedRooms>
+</rooms>
